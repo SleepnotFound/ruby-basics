@@ -6,7 +6,7 @@ describe 'caesar_cipher' do
   end
 
   it "returns a cipher of long shift" do
-    expect(caesar_cipher("world", 50)).to eql("Bmfy f xywnsl!")
+    expect(caesar_cipher("world", 50)).to eql("umpjb")
   end
 
   it "returns a cipher of string with capatalization" do
@@ -22,6 +22,6 @@ describe 'caesar_cipher' do
   end
   
   it "returns a cipher of large shift and string" do
-    expect(caesar_cipher("This is a secret, please do not show it to anyone!", 45)).to eql("Xlmw mw e wigvix tpiewi hs rsx wlsa mx xs ercsri!")
+    expect(caesar_cipher("This is a secret, please do not show it to anyone!", 45)).to eql("gabl bl t lxvkxm, iextlx wh ghm lahp bm mh tgrhgx!")
   end
 end

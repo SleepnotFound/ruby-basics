@@ -1,3 +1,7 @@
+require 'pry-byebug'
+
+#binding.pry
+
 def caesar_cipher(string, shift)
   s_array = string.chars
   s_array.map! do |c|
@@ -6,7 +10,10 @@ def caesar_cipher(string, shift)
       c = if new_ord.between?(65, 90) || new_ord.between?(97, 122)
             new_ord.chr
           else
-            c.ord.between?(65, 90) ? (64 + (new_ord - 90)).chr : (96 + (new_ord - 122)).chr
+            until new_ord.between?(65, 90) || new_ord.between?(97, 122)
+              new_ord = c.ord.between?(65, 90) ? 64 + (new_ord - 90) : 96 + (new_ord - 122)
+            end
+            new_ord.chr
           end
     else
       c
