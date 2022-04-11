@@ -1,5 +1,4 @@
 def caesar_cipher(string, shift)
-  puts "your string: #{string}, your shift: #{shift}"
   s_array = string.chars
   s_array.map! do |c|
     if c.ord.between?(65, 90) || c.ord.between?(97, 122)
@@ -13,6 +12,5 @@ def caesar_cipher(string, shift)
       c
     end
   end
-  puts "cipher: #{s_array.join}"
+  s_array.join
 end
-caesar_cipher('What a string!', 5)
